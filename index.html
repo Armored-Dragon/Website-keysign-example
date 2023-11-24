@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js"></script>
+    <title>In-Browser Keysigning</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="disclaimer data-area">
+        This online key signing and encryption example should
+        <u> NEVER </u>
+        be used in a production environment. This was made for educational purposes in exploring the use of cryptography in the web without the use of
+        third-party libraries. You can find the source code for this website <a href="https://armored-dragon.github.io/Website-keysign-example/index">here</a>.
+        <br />
+      </div>
+      <div class="disclaimer data-area">
+        The resulting data is manipulated to allow for viewing in-line in the browser so the relationships can be more easily observed.
+      </div>
+      <div class="data-area">
+        <div class="data-title">Your unencrypted text</div>
+        <textarea id="my-secret-string">I want to keep this message a secret! </textarea>
+      </div>
+
+      <div class="action-area">
+        <button onclick="generateRSAKeyPair()"><span>Generate Keys</span></button>
+        <button onclick="executeTests()"><span>Execute Tests</span></button>
+      </div>
+
+      <div class="result-area">
+        <div class="result">
+          <div class="result-title">Encrypted String</div>
+          <div id="encrypted-string"></div>
+        </div>
+        <div class="result">
+          <div class="result-title">Decrypted String</div>
+          <div id="decrypted-string"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Signature String</div>
+          <div id="signature-string"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Public Key (Encryption)</div>
+          <div id="pub-key-enc"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Private Key (Encryption)</div>
+          <div id="priv-key-enc"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Public Key (Signing)</div>
+          <div id="pub-key-sign"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Private Key (Signing)</div>
+          <div id="priv-key-sign"></div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">Results</div>
+          <div id="results"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,3 +1,3 @@
-# Website-keysign-example
+# Website Key signing and Encryption example
 
-An example showcasing basic cryptography in-browser without using third-party libraries. 
+An example website showcasing basic cryptography in-browser without using third-party libraries.
